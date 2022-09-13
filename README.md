@@ -9,10 +9,10 @@ The script City_Variables_Extraction.ipynb is created as a Jupyter Notebook. Thi
 
 Once all the data is acquired, you need to run two Python scripts: Merge_Data_PfPR_Modelling_Git.py first and then Merge_Data_Git.py . The first one filters the malaria data based on the criteria given in the ERL paper. These can be adapted for each city of interest. It also merges LCZs according to their similarities (see Bechtel et al. 2017). In addition, this script permits the normalization of PfPR 2-10 by the maximum and the minimum. Once run, you need to run Merge_Data_Git.py which will compile a single data frame that will be used in the R program for running the Random Forest algorithm. In this scripts, you can chose to add a dummy variable per city.
 
-2. **Testing the buffer sizes and the predictive variables' importance**
+3. **Testing the buffer sizes and the predictive variables' importance**
 
 The next step consists in running the Random Forest algorithm in R to define which set of variable is the most predictive for the cities of interest as well as the optimal buffer size around malaria surveys. You can also test the added value of the dummy variable for the model's performance. This is done by running the RandomForest_Git.R script.
 
-3. **Predicting PfPR 2-10 per city**
+4. **Predicting PfPR 2-10 per city**
 
 Once you have defined the optimal set of variables aggregated within a certain buffer size around the malaria survey, you can predict the PfPR 2-10 for the chose city of interest by running each strategy: "Single City", "All Other Cities" or "All Cities". Please refer to the ERL paper for more information about these strategies. 
